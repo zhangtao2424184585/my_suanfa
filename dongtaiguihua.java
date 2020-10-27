@@ -1,6 +1,7 @@
 package com.example.aaaaa.domain;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Classname dongtaiguihua

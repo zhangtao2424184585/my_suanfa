@@ -1,9 +1,8 @@
 package com.example.aaaaa.domain;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -16,6 +15,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class xiancheng {
     public static void main(String[] args) {
+        Set<Integer> set = new HashSet<>();
         Resouce resouce = new Resouce();
         new Thread(() -> {
             try {

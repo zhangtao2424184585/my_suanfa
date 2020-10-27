@@ -19,15 +19,17 @@ public class chengchanzhexiaofeizhe {
         t2.start();
     }
 
-     static class Storage{
+    static class Storage {
         private LinkedList<Integer> storages;
         private int maxSize;
-        public Storage(){
+
+        public Storage() {
             this.maxSize = 10;
             this.storages = new LinkedList<>();
         }
-        public synchronized void put(){
-            if (storages.size() == maxSize){
+
+        public synchronized void put() {
+            if (storages.size() == maxSize) {
                 try {
                     wait();
                 } catch (InterruptedException e) {
@@ -38,8 +40,9 @@ public class chengchanzhexiaofeizhe {
             System.out.println("库存为：" + storages.size());
             notify();
         }
-        public synchronized void take(){
-            if (storages.size()==0){
+
+        public synchronized void take() {
+            if (storages.size() == 0) {
                 try {
                     wait();
                 } catch (InterruptedException e) {
@@ -53,11 +56,13 @@ public class chengchanzhexiaofeizhe {
     }
 
 
-    static class Privider implements Runnable{
+    static class Privider implements Runnable {
         private Storage storage;
-        public Privider(Storage storage){
+
+        public Privider(Storage storage) {
             this.storage = storage;
         }
+
         @Override
         public void run() {
             for (int i = 0; i < 100; i++) {
@@ -70,9 +75,11 @@ public class chengchanzhexiaofeizhe {
             }
         }
     }
-    static class Consumer implements Runnable{
+
+    static class Consumer implements Runnable {
         private Storage storage;
-        public Consumer(Storage storage){
+
+        public Consumer(Storage storage) {
             this.storage = storage;
         }
 

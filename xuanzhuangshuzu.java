@@ -8,7 +8,7 @@ package com.example.aaaaa.domain;
  */
 public class xuanzhuangshuzu {
     public static void main(String[] args) {
-        int[] numbers = {2, 2, 2, 0, 1};
+        int[] numbers = {3, 4, 5, 0, 1, 2};
         int left = 0;
         int right = numbers.length - 1;
         while (left < right) {
